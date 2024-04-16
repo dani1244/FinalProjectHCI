@@ -5,29 +5,27 @@ body {
     font-family: 'Montserrat', sans-serif;
     position: relative;
     height: 100vh;
-    padding:0px 0px 250px 0px;
-    background: #010615;
-    color: rgb(200,200,200);
+    padding: 0px 0px 250px 0px;
+    background: #f0f0f0; /* Cor de fundo mais clara */
+    color: #333; /* Cor de texto mais escura */
 }
-
 
 /*navbar
 ---------------------------- */
 
 .navbar {
-    background: none
+    background: #333; /* Cor de fundo escura para a barra de navegação */
 }
 
 .nav-link {
-    color: rgb(113,113,113);
+    color: #fff; /* Cor de texto branca para os links de navegação */
 }
 
 .nav-link:hover {
-    transform:scale(1.05);
-    color: white;
+    transform: scale(1.05);
+    color: #ff6347; /* Cor de texto vermelha ao passar o mouse */
 }
 
 .nav-link.ativo {
-    color: lightskyblue;
+    color: #007bff; /* Cor de texto azul para o link ativo */
 }
-
