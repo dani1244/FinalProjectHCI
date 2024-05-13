@@ -60,6 +60,8 @@ body .container header .info .subtitle{
     min-width: 70%;
     margin: 0 auto 20px;
     font-size: 1rem;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
 }
 
 body .details{
