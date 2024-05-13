@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="style_form.css" />
     <meta charset="utf-8">
     <title>title</title>
  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
@@ -164,14 +165,14 @@
     </fieldset>
     
     <fieldset>
-        <legend for="496246652">Provide a list of all school and college related activities (sports, arts, music, volunteering) with dates of involvement.</legend>
+        <legend for="496246652">List of all school and college related activities.</legend>
         <div class="form-group">
             <textarea id="1766094289" name="entry.1766094289" class="form-control" required></textarea>
         </div>
     </fieldset>
     
     <fieldset>
-        <legend for="2128562467">Provide of list of other volunteering and community activities not related to school with dates of involvement.</legend>
+        <legend for="2128562467">List of other volunteering and community activities.</legend>
         <div class="form-group">
             <textarea id="49583743" name="entry.49583743" class="form-control" required></textarea>
         </div>
@@ -235,7 +236,7 @@ $('#bootstrapForm').submit(function (event) {
             // does not support it, so this is handled as a failure.
             alert('Form Submitted. Thanks.')
             // You can also redirect the user to a custom thank-you page:
-            // window.location = 'http://www.mydomain.com/thankyoupage.html'
+            window.location = 'index.html'
         }
     })
 })
