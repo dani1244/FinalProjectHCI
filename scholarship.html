@@ -22,6 +22,7 @@
             background-color: #f4f4f4;
         }
         .container2 {
+            width: 100%; 
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
@@ -44,7 +45,6 @@
         .bolsa:hover {
             background-color: #e0e0e0; /* Change background color on hover */
         }
-
         .bolsa h2 {
             margin-top: 0;
             color: #666;
@@ -56,6 +56,37 @@
         .bolsa a {
             text-decoration: none; /* Remove underline from anchor tags */
             color: inherit; /* Inherit text color */
+        }
+        /* New CSS for filter buttons */
+        .filter-btn {
+            background-color: #999;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+        .filter-btn:hover {
+            background-color: #777;
+        }
+        .selected {
+            background-color: #777;
+        }
+        /* CSS for filter container */
+        .filter-container {
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .filter-title {
+            margin-top: 0;
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -97,34 +128,69 @@
             </div>
         </div>
     </nav>
-    <div class="container2" style="padding-top: 3%;">
-        <h1>Bolsas de Estudo Disponíveis</h1>
-        
-        <div class="bolsa" onclick="selectOption(this)">
-            <h2>Bolsa de Estudo em Ciência da Computação</h2>
-            <p><strong>Instituição:</strong> Universidade XYZ</p>
-            <p><strong>Descrição:</strong> Bolsa de estudo para estudantes de graduação em Ciência da Computação. Cobertura total das mensalidades durante quatro anos de estudo.</p>
-            <p><strong>Requisitos:</strong> Média mínima de 8.0 no histórico escolar e carta de recomendação.</p>
-        </div>
-        
-        <div class="bolsa" onclick="selectOption(this)">
-            <h2>Bolsa de Estudo em Engenharia Civil</h2>
-            <p><strong>Instituição:</strong> Faculdade ABC</p>
-            <p><strong>Descrição:</strong> Bolsa de estudo para estudantes de pós-graduação em Engenharia Civil. Valor parcial das mensalidades durante dois anos de estudo.</p>
-            <p><strong>Requisitos:</strong> Experiência prévia na área e projeto de pesquisa aprovado.</p>
-        </div>
-        
-        <div class="bolsa" onclick="selectOption(this)">
-            <h2>Bolsa de Estudo em Administração de Empresas</h2>
-            <p><strong>Instituição:</strong> Instituto 123</p>
-            <p><strong>Descrição:</strong> Bolsa de estudo para estudantes de mestrado em Administração de Empresas. Auxílio financeiro para despesas de pesquisa durante um ano.</p>
-            <p><strong>Requisitos:</strong> Fluência em inglês e apresentação de projeto de pesquisa.</p>
+    <div class="container-fluid">
+        <div class="container2" style="padding-top: 3%;">
+            <h1>Bolsas de Estudo Disponíveis</h1>
+            
+            <!-- Filter buttons -->
+            <div class="filter-container">
+                <h2 class="filter-title">Filtrar por Categoria</h2>
+                <button class="filter-btn" onclick="filterOptions('all')">Todos</button>
+                <button class="filter-btn" onclick="filterOptions('engenharia')">Engenharias</button>
+                <button class="filter-btn" onclick="filterOptions('computacao')">Ciência da Computação</button>
+                <button class="filter-btn" onclick="filterOptions('administracao')">Administração</button>
+            </div>
+            
+            <!-- Bolsas de Estudo -->
+            <div class="bolsa engenharia" onclick="selectOption(this)">
+                <h2>Bolsa de Estudo em Engenharia Civil</h2>
+                <p><strong>Instituição:</strong> Faculdade ABC</p>
+                <p><strong>Descrição:</strong> Bolsa de estudo para estudantes de pós-graduação em Engenharia Civil. Valor parcial das mensalidades durante dois anos de estudo.</p>
+                <p><strong>Requisitos:</strong> Experiência prévia na área e projeto de pesquisa aprovado.</p>
+            </div>
+            
+            <div class="bolsa engenharia" onclick="selectOption(this)">
+                <h2>Bolsa de Estudo em Engenharia Mecânica</h2>
+                <p><strong>Instituição:</strong> Universidade XYZ</p>
+                <p><strong>Descrição:</strong> Bolsa de estudo para estudantes de graduação em Engenharia Mecânica. Cobertura parcial das mensalidades durante três anos de estudo.</p>
+                <p><strong>Requisitos:</strong> Média mínima de 7.5 no histórico escolar e projeto de pesquisa aprovado.</p>
+            </div>
+
+            <div class="bolsa computacao" onclick="selectOption(this)">
+                <h2>Bolsa de Estudo em Ciência da Computação</h2>
+                <p><strong>Instituição:</strong> Universidade XYZ</p>
+                <p><strong>Descrição:</strong> Bolsa de estudo para estudantes de graduação em Ciência da Computação. Cobertura total das mensalidades durante quatro anos de estudo.</p>
+                <p><strong>Requisitos:</strong> Média mínima de 8.0 no histórico escolar e carta de recomendação.</p>
+            </div>
+
+            <div class="bolsa administracao" onclick="selectOption(this)">
+                <h2>Bolsa de Estudo em Administração de Empresas</h2>
+                <p><strong>Instituição:</strong> Instituto 123</p>
+                <p><strong>Descrição:</strong> Bolsa de estudo para estudantes de mestrado em Administração de Empresas. Auxílio financeiro para despesas de pesquisa durante um ano.</p>
+                <p><strong>Requisitos:</strong> Fluência em inglês e apresentação de projeto de pesquisa.</p>
+            </div>
         </div>
     </div>
 
     <script>
+        // Function to filter options based on category
+        function filterOptions(category) {
+            // Get all elements with class "bolsa"
+            var options = document.querySelectorAll('.bolsa');
+            // If category is "all", show all options, otherwise, show options with matching category
+            options.forEach(function(option) {
+                if (category === 'all') {
+                    option.style.display = 'block';
+                } else if (option.classList.contains(category)) {
+                    option.style.display = 'block';
+                } else {
+                    option.style.display = 'none';
+                }
+            });
+        }
+
+        // Function to toggle selection
         function selectOption(element) {
-            // Toggle a class to indicate selection
             element.classList.toggle('selected');
         }
     </script>
