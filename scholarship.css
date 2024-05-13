@@ -98,17 +98,17 @@ header .buttons{
     margin-top: 10px;
 }
 
-header .buttons button{
+header .buttons button.Deadline{
     border: none;
     padding: 8px;
     width: 140px;
     border-radius: 10px;
-    background-color: #777;
-    color: #fff;
+    background-color: red;
+    color: black;
     cursor: pointer;
 }
 
-header .buttons button.see-all{
+header .buttons button.Open{
     background-color: #2d6a4f;
 }
 
@@ -234,8 +234,8 @@ header .search button{
 .content .podcasts .item .bottom h5,
 .content .articles .item .bottom h5{
     font-weight: 500;
-    background-color: #fff2b2;
-    color: #db7c26;
+    background-color: red;
+    color: whitesmoke;
     padding: 10px;
     border-radius: 12px;
     font-size: 13px;
