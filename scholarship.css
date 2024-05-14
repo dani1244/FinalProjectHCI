@@ -241,6 +241,19 @@ header .search button{
     font-size: 13px;
 }
 
+.content .courses .item .bottom h5.tag2,
+.content .courses .item .bottom .discount > h5,
+.content .podcasts .item .bottom h5,
+.content .articles .item .bottom h5{
+    font-weight: 500;
+    background-color: rgb(99, 191, 245);
+    color: whitesmoke;
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 13px;
+}
+
+
 .content .courses .item .bottom h5.tag span,
 .content .courses .item .bottom .discount > h5 span,
 .content .podcasts .item .bottom h5 span,
