@@ -19,6 +19,32 @@
         <style>
 
         </style>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const openButton = document.querySelector('.Open');
+                const closedButton = document.querySelector('.Deadline');
+    
+                openButton.addEventListener('click', function() {
+                    filterScholarships('Open');
+                });
+    
+                closedButton.addEventListener('click', function() {
+                    filterScholarships('Closed');
+                });
+    
+                function filterScholarships(status) {
+                    const scholarships = document.querySelectorAll('.item');
+                    scholarships.forEach(function(scholarship) {
+                        const tag = scholarship.querySelector('.tag');
+                        if ((status === 'Open' && !tag) || (status === 'Closed' && tag)) {
+                            scholarship.style.display = 'block';
+                        } else {
+                            scholarship.style.display = 'none';
+                        }
+                    });
+                }
+            });
+        </script>
     </head>
     <body>
         <nav class="navbar navbar-expand-xl fixed-top" style="position: fixed;">
