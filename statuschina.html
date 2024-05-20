@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estado da Encomenda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+       .container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+       .status {
+            font-weight: bold;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Verifique o Estado da Sua Encomenda</h2>
+        <form id="encomendaForm">
+            <label for="numeroEncomenda">Número da Encomenda:</label>
+            <input type="text" id="numeroEncomenda" name="numeroEncomenda" required>
+            <button type="submit">Verificar Estado</button>
+        </form>
+        <div id="statusEncomenda" class="status"></div>
+    </div>
+
+    <script>
+        document.getElementById('encomendaForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio do formulário para recarregar a página
+
+            // Simulação de verificação do estado da encomenda
+            var numeroEncomenda = document.getElementById('numeroEncomenda').value;
+            var statusEncomenda = document.getElementById('statusEncomenda');
+
+            // Aqui você pode substituir esta lógica pela chamada a uma API ou função que verifica o estado da encomenda
+            var estadoSimulado = "Encomenda entregue"; // Exemplo de estado simulado
+
+            statusEncomenda.textContent = "Estado da Encomenda: " + estadoSimulado;
+        });
+    </script>
+</body>
+</html>
