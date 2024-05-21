@@ -267,9 +267,17 @@ header .search button{
 }
 
 .content .courses .item .bottom .discount > h5{
-    background-color: #b7e4c7;
+    background-color:  rgb(99, 191, 245);
     color: #2d6a4f;
 }
+
+.content .courses .item .bottom .discount h5.open{
+    color:#000;
+    background-color:  rgba(0, 128, 0, 0.534);
+    
+}
+
+
 
 .content .courses .item .bottom .discount .time{
     text-align: center;
