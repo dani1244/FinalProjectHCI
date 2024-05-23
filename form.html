@@ -1,226 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
-    <link rel="stylesheet" href="style_form.css" />
     <meta charset="utf-8">
-    <title>title</title>
-    <link rel="icon" type="image/png" href="imagens/school-svgrepo-com.svg">
- <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <title>Multi Step Form | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
   <body>
-<div class="container">
-  <div class="columns">
-    <div class="column col-auto col-mx-auto">
-		<div class="form-group">
-<form target="_self"
-      id="bootstrapForm"
-      method="POST">
-    <fieldset>
-        <h2>Scholarship Application Form<br><small></small></h2>
-    </fieldset>
-    
-    <fieldset>
-        <legend for="560357323">Name</legend>
-        <div class="form-group">
-            <input id="1870758730" type="text" name="entry.1870758730" class="form-control" required>
+    <div class="container">
+      <header>APPLICATION FORM</header>
+      <div class="progress-bar">
+        <div class="step">
+          <p>Name</p>
+          <div class="bullet">
+            <span>1</span>
+          </div>
+          <div class="check fas fa-check"></div>
         </div>
-    </fieldset>
-    <!-- Field type: "date" id: "244872231" -->
-    <fieldset>
-        <legend for="244872231">Date of Birth</legend>
-        <div class="form-group">
-            <input type="date" id="1366943480_date" placeholder="8/23/2019" class="form-control" required>
+        <div class="step">
+          <p>Contact</p>
+          <div class="bullet">
+            <span>2</span>
+          </div>
+          <div class="check fas fa-check"></div>
         </div>
-    </fieldset>
-    
-    <fieldset>
-        <legend for="816409302">Email</legend>
-        <div class="form-group">
-            <input id="1446928002" type="text" name="entry.1446928002" class="form-control" required>
+        <div class="step">
+          <p>Birth</p>
+          <div class="bullet">
+            <span>3</span>
+          </div>
+          <div class="check fas fa-check"></div>
         </div>
-    </fieldset>
-    
-    <fieldset>
-        <legend for="315811813">Home Phone Number</legend>
-        <div class="form-group">
-            <input id="931795366" type="text" name="entry.931795366" class="form-control" required>
+        <div class="step">
+          <p>Submit</p>
+          <div class="bullet">
+            <span>4</span>
+          </div>
+          <div class="check fas fa-check"></div>
         </div>
-    </fieldset>
-    
-    <fieldset>
-        <legend for="118912652">Mobile Phone Number</legend>
-        <div class="form-group">
-            <input id="571807165" type="text" name="entry.571807165" class="form-control" required>
-        </div>
-    </fieldset>
+      </div>
+      <div class="form-outer">
+        <form action="#">
+          <div class="page slide-page">
+            <div class="title">Basic Info:</div>
+            <div class="field">
+              <div class="label">First Name</div>
+              <input type="text">
+            </div>
+            <div class="field">
+              <div class="label">Last Name</div>
+              <input type="text">
+            </div>
+            <div class="field">
+              <button class="firstNext next">Next</button>
+            </div>
+          </div>
 
-    <fieldset>
-        <legend for="1627772952">Street Address</legend>
-        <div class="form-group">
-            <input id="731703696" type="text" name="entry.731703696" class="form-control" required>
-        </div>
-    </fieldset>
-    
-    <fieldset>
-        <legend for="1894447039">Address Line 2</legend>
-        <div class="form-group">
-            <input id="191819346" type="text" name="entry.191819346" class="form-control" >
-        </div>
-    </fieldset>
-    
-    <fieldset>
-        <legend for="640817788">City</legend>
-        <div class="form-group">
-            <input id="1593459079" type="text" name="entry.1593459079" class="form-control" required>
-        </div>
-    </fieldset>
-    
-    <fieldset>
-        <legend for="729245173">State / Province / Region</legend>
-        <div class="form-group">
-            <input id="985843578" type="text" name="entry.985843578" class="form-control" required>
-        </div>
-    </fieldset>
-    
-    <fieldset>
-        <legend for="805441958">Postal / Zip Code</legend>
-        <div class="form-group">
-            <input id="1343419221" type="text" name="entry.1343419221" class="form-control" required>
-        </div>
-    </fieldset>
-    
-    <fieldset>
-        <legend for="843449053">Country</legend>
-        <div class="form-group">
-            <input id="1987627186" type="text" name="entry.1987627186" class="form-control" required>
-        </div>
-    </fieldset>
-    
-    <fieldset>
-        <legend for="40611239">Name of University/College</legend>
-        <div class="form-group">
-            <input id="320508743" type="text" name="entry.320508743" class="form-control" required>
-        </div>
-    </fieldset>
-  
-    <fieldset>
-        <legend for="767398290">Email address of University/College admissions office</legend>
-        <div class="form-group">
-            <input id="1038705196" type="text" name="entry.1038705196" class="form-control" required>
-        </div>
-    </fieldset>
-    
-    <fieldset>
-        <legend for="1524135022">Current Cumulative GPA (out of 4.0)</legend>
-        <div class="form-group">
-            <input id="1538131944" type="text" name="entry.1538131944" class="form-control" required>
-        </div>
-    </fieldset>
-    
-    <fieldset>
-        <legend for="1802145594">Number of college credits earned till date</legend>
-        <div class="form-group">
-            <input id="1481001928" type="text" name="entry.1481001928" class="form-control" required>
-        </div>
-    </fieldset>
-    
-    <fieldset>
-        <legend for="2063180162">Total number of credits required for graduation</legend>
-        <div class="form-group">
-            <input id="857226562" type="text" name="entry.857226562" class="form-control" required>
-        </div>
-    </fieldset>
-    
-    <fieldset>
-        <legend for="1833926080">Expected date of graduation</legend>
-        <div class="form-group">
-            <input type="date" id="737336953_date" placeholder="8/23/2019" class="form-control" required>
-        </div>
-    </fieldset>
-    
-    <fieldset>
-        <legend for="259212042">Degree received on date of graduation</legend>
-        <div class="form-group">
-            <input id="1892752439" type="text" name="entry.1892752439" class="form-control" required>
-        </div>
-    </fieldset>
-    
-    <fieldset>
-        <legend for="496246652">List of all school and college related activities.</legend>
-        <div class="form-group">
-            <textarea id="1766094289" name="entry.1766094289" class="form-control" required></textarea>
-        </div>
-    </fieldset>
-    
-    <fieldset>
-        <legend for="2128562467">List of other volunteering and community activities.</legend>
-        <div class="form-group">
-            <textarea id="49583743" name="entry.49583743" class="form-control" required></textarea>
-        </div>
-    </fieldset>
+          <div class="page">
+            <div class="title">Contact Info:</div>
+            <div class="field">
+              <div class="label">Email Address</div>
+              <input type="text">
+            </div>
+            <div class="field">
+              <div class="label">Phone Number</div>
+              <input type="Number">
+            </div>
+            <div class="field btns">
+              <button class="prev-1 prev">Previous</button>
+              <button class="next-1 next">Next</button>
+            </div>
+          </div>
 
+          <div class="page">
+            <div class="title">Date of Birth:</div>
+            <div class="field">
+              <div class="label">Date</div>
+              <input type="text">
+            </div>
+            <div class="field">
+              <div class="label">Gender</div>
+              <select>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field btns">
+              <button class="prev-2 prev">Previous</button>
+              <button class="next-2 next">Next</button>
+            </div>
+          </div>
 
-    <input type="hidden" name="fvv" value="1">
-    <input type="hidden" name="fbzx" value="-6306136825722773412">
-    
-    <input type="hidden" name="pageHistory" value="0,1,2">
+          <div class="page">
+            <div class="title">Studies Details:</div>
+            <div class="field">
+              <div class="label">School</div>
+              <input type="text">
+            </div>
+            <div class="field">
+              <div class="label">year</div>
+              <input type="">
+            </div>
+            <div class="field btns">
+              <button class="prev-3 prev">Previous</button>
+              <button class="submit">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
 
-    <input class="btn btn-primary" type="submit" value="Submit">
-</form>
-</div>
-</div>
-</div>
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
-<script>
-$('#bootstrapForm').submit(function (event) {
-    event.preventDefault()
-    var extraData = {}
-    {
-        /* Parsing input date id=1366943480 */
-        var dateField = $("#1366943480_date").val()
-        var timeField = $("#1366943480_time").val()
-        let d = new Date(dateField)
-        if (!isNaN(d.getTime())) {
-            extraData["entry.1366943480_year"] = d.getFullYear()
-            extraData["entry.1366943480_month"] = d.getMonth() + 1
-            extraData["entry.1366943480_day"] = d.getUTCDate()
-        }
-        if (timeField && timeField.split(':').length >= 2) {
-            let values = timeField.split(':')
-            extraData["entry.1366943480_hour"] = values[0]
-            extraData["entry.1366943480_minute"] = values[1]
-        }
-    }
-    {
-        /* Parsing input date id=737336953 */
-        var dateField = $("#737336953_date").val()
-        var timeField = $("#737336953_time").val()
-        let d = new Date(dateField)
-        if (!isNaN(d.getTime())) {
-            extraData["entry.737336953_year"] = d.getFullYear()
-            extraData["entry.737336953_month"] = d.getMonth() + 1
-            extraData["entry.737336953_day"] = d.getUTCDate()
-        }
-        if (timeField && timeField.split(':').length >= 2) {
-            let values = timeField.split(':')
-            extraData["entry.737336953_hour"] = values[0]
-            extraData["entry.737336953_minute"] = values[1]
-        }
-    }
-    $('#bootstrapForm').ajaxSubmit({
-        data: extraData,
-        dataType: 'jsonp',  // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
-        error: function () {
-            // Submit of form should be successful but JSONP callback will fail because Google Forms
-            // does not support it, so this is handled as a failure.
-            alert('Form Submitted. Thanks.')
-            // You can also redirect the user to a custom thank-you page:
-            window.location = 'index.html'
-        }
-    })
-})
-</script>
-</body>
+  </body>
 </html>
