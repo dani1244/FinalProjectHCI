@@ -104,12 +104,17 @@ header .buttons button.Deadline{
     width: 140px;
     border-radius: 10px;
     background-color: red;
-    color: black;
+    color: white;
     cursor: pointer;
 }
 
 header .buttons button.Open{
     background-color: #2d6a4f;
+}
+
+header .buttons button.All{
+    background-color: black;
+    color: white;
 }
 
 header .search{
