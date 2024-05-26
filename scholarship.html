@@ -21,33 +21,38 @@
 
         </style>
         <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                const openButton = document.querySelector('.Open');
-                const closedButton = document.querySelector('.Deadline');
-    
-                openButton.addEventListener('click', function() {
-                    filterScholarships('Open');
-                });
-    
-                closedButton.addEventListener('click', function() {
-                    filterScholarships('Closed');
-                });
+        document.addEventListener("DOMContentLoaded", function() {
+        const openButton = document.querySelector('.Open');
+        const closedButton = document.querySelector('.Deadline');
+        const showAllButton = document.querySelector('.All');
 
-                
-    
-                function filterScholarships(status) {
-                    const scholarships = document.querySelectorAll('.item');
-                    scholarships.forEach(function(scholarship) {
-                        const tag = scholarship.querySelector('.tag');
-                        if ((status === 'Open' && !tag) || (status === 'Closed' && tag)) {
-                            scholarship.style.display = 'block';
-                        } else {
-                            scholarship.style.display = 'none';
-                        }
-                    });
+        openButton.addEventListener('click', function() {
+            filterScholarships('Open');
+        });
+
+        closedButton.addEventListener('click', function() {
+            filterScholarships('Closed');
+        });
+
+        showAllButton.addEventListener('click', function() {
+            filterScholarships('All');
+        });
+
+        function filterScholarships(status) {
+            const scholarships = document.querySelectorAll('.item');
+            scholarships.forEach(function(scholarship) {
+                const tag = scholarship.querySelector('.tag');
+                if (status === 'All') {
+                    scholarship.style.display = 'block';
+                } else if ((status === 'Open' && !tag) || (status === 'Closed' && tag)) {
+                    scholarship.style.display = 'block';
+                } else {
+                    scholarship.style.display = 'none';
                 }
             });
-        </script>
+        }
+    });
+    </script>
     </head>
     <body>
         <nav class="navbar navbar-expand-xl fixed-top" style="position: fixed;">
