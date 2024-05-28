@@ -28,3 +28,12 @@ body {
 .nav-link.ativo {
     color: #007bff; /* Cor de texto azul para o link ativo */
 }
+
+.signup {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}

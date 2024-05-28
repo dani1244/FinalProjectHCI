@@ -651,3 +651,12 @@ footer .copyright{
     }
 
 }
+
+.signup {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
